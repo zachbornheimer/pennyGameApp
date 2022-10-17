@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "PennyGame",
-    "slug": "PennyGame",
+    "slug": "penny-game-app",
     "version": "1.0.0",
     "orientation": "default",
     "icon": "./assets/icon.png",
@@ -17,7 +17,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "penny-game-app"
     },
     "android": {
       "adaptiveIcon": {
