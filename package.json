@@ -1,27 +1,30 @@
 {
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web",
-    "eject": "expo eject"
+    "start": "npx expo start",
+    "android": "npx expo start --android",
+    "ios": "npx expo start --ios",
+    "web": "npx expo start --web",
+    "eject": "npx expo eject"
   },
   "dependencies": {
-    "@react-navigation/bottom-tabs": "^5.11.11",
-    "expo": "~41.0.1",
+    "expo": "^46.0.16",
     "expo-ads-admob": "~10.0.4",
-    "expo-status-bar": "~1.0.4",
-    "react": "16.13.1",
-    "react-dom": "16.13.1",
+    "expo-cli": "^6.0.6",
+    "expo-status-bar": "~1.4.0",
+    "react": "18.0.0",
+    "react-dom": "18.0.0",
     "react-icons": "^4.2.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
+    "react-native": "0.69.6",
     "react-native-admob": "^2.0.0-beta.6",
-    "react-native-web": "~0.13.12",
+    "react-native-web": "~0.18.7",
     "yarn": "^1.22.10"
   },
   "devDependencies": {
-    "@babel/core": "^7.9.0"
+    "@babel/core": "^7.18.6",
+    "typescript": "^4.6.3",
+    "@types/react": "~18.0.0",
+    "@types/react-native": "~0.69.1"
   },
   "private": true
 }
