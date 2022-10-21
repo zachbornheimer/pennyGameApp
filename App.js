@@ -18,6 +18,8 @@ import {
 } from 'react-native';
 import { getCurrentTimestamp } from 'react-native/Libraries/Utilities/createPerformanceLogger';
 
+import * as Constants from './theme';
+
 export default function App() {
 
   const otherResourcesLink = 'https://zachbornheimermusic.com/education-resources';
@@ -184,27 +186,6 @@ export default function App() {
     );
   }
 
-  const footer_offset = 60;
-  const progress_wheel_size = 172;
-
-  const colors = {
-    primary: '#5DB075',
-    gray1: '#F6F6F6',
-    gray2: '#E8E8E8',
-    gray3: '#BDBDBD',
-    gray4: '#666666',
-    background: '#FFF',
-    footer: '#D9D9D9',
-    shadow: '#171717',
-    white: "#FFF",
-    black: "#000",
-  };
-
-  const pennyOffset = {
-    /* ideal for 172 wheel size */
-    left: 100,
-    top: 185,
-  }
 
   const styles = StyleSheet.create({
     modeSwitcherLandscape: {
@@ -220,7 +201,7 @@ export default function App() {
     button: {
       width: '40%',
       height: 40,
-      backgroundColor: colors.white,
+      backgroundColor: Constants.colors.white,
       borderRadius: 4,
       borderColor: 'lightblue',
       borderWidth: 2,
@@ -229,7 +210,7 @@ export default function App() {
     about: {
       padding: 10,
       flex: 1,
-      backgroundColor: colors.white,
+      backgroundColor: Constants.colors.white,
       alignItems: 'center',
       justifyContent: 'center',
       borderTopRightRadius: 16,
@@ -247,7 +228,7 @@ export default function App() {
       marginTop: 30,
     },
     aboutText: {
-      color: colors.gray4,
+      color: Constants.colors.gray4,
       width: 375,
       fontSize: 16,
       textAlign: 'center',
@@ -257,14 +238,14 @@ export default function App() {
       width: 327,
       height: 51,
       borderRadius: 100,
-      backgroundColor: colors.primary,
+      backgroundColor: Constants.colors.primary,
       alignContent: 'center',
       justifyContent: 'center',
       cursor: 'pointer',
       marginBottom: 20,
     },
     aboutCloseButtonText: {
-      color: colors.white,
+      color: Constants.colors.white,
       textAlign: 'center',
       fontWeight: '600',
       fontSize: 16,
@@ -280,7 +261,7 @@ export default function App() {
     },
 
     btnShadow: {
-      shadowColor: colors.shadow,
+      shadowColor: Constants.colors.shadow,
       shadowOffset: { width: 0, height: 4 },
       shadowOpacity: 0.2,
       shadowRadius: 3,
@@ -289,7 +270,7 @@ export default function App() {
     yesButton: {
       width: 131,
       height: 51,
-      backgroundColor: colors.primary,
+      backgroundColor: Constants.colors.primary,
       borderRadius: 100,
       justifyContent: 'center',
       alignContent: 'center',
@@ -299,7 +280,7 @@ export default function App() {
       marginRight: 27,
     },
     yesButtonText: {
-      color: colors.white,
+      color: Constants.colors.white,
       fontSize: 16,
       fontWeight: '600',
       userSelect: 'none',
@@ -309,7 +290,7 @@ export default function App() {
     noButton: {
       width: 131,
       height: 51,
-      borderColor: colors.primary,
+      borderColor: Constants.colors.primary,
       borderWidth: 1,
       borderRadius: 100,
       justifyContent: 'center',
@@ -318,16 +299,16 @@ export default function App() {
       justifyContent: 'center',
       center: true,
       marginLeft: 27,
-      backgroundColor: colors.gray1,
+      backgroundColor: Constants.colors.gray1,
     },
     noButtonText: {
-      color: colors.primary,
+      color: Constants.colors.primary,
       fontSize: 16,
       fontWeight: '600',
       userSelect: 'none',
     },
     modalShown: {
-      backgroundColor: colors.black,
+      backgroundColor: Constants.colors.black,
       height: '200%',
       width: '200%',
       top: 0,
@@ -339,7 +320,7 @@ export default function App() {
 
 
     activeMode: {
-      backgroundColor: colors.white,
+      backgroundColor: Constants.colors.white,
       borderWidth: 0,
       borderRadius: 50,
       width: 170,
@@ -347,7 +328,7 @@ export default function App() {
       fontSize: 16,
       lineHeight: 21,
       fontWeight: 'bold',
-      color: colors.white,
+      color: Constants.colors.white,
       alignItems: 'center',
       justifyContent: 'center',
     },
@@ -358,7 +339,7 @@ export default function App() {
       cursor: 'not-allowed',
     },
     activeModeText: {
-      backgroundColor: colors.white,
+      backgroundColor: Constants.colors.white,
       borderWidth: 0,
       borderRadius: 50,
       fontSize: 16,
@@ -369,13 +350,13 @@ export default function App() {
       userSelect: 'none',
     },
     activeModeTextEnabled: {
-      color: colors.primary,
+      color: Constants.colors.primary,
     },
     activeModeTextDisabled: {
-      color: colors.gray4,
+      color: Constants.colors.gray4,
     },
     inactiveMode: {
-      color: colors.gray3,
+      color: Constants.colors.gray3,
       borderRadius: 50,
       width: 170,
       center: true,
@@ -383,7 +364,7 @@ export default function App() {
       lineHeight: 21,
       fontWeight: 'bold',
       letterSpacing: 0.25,
-      color: colors.white,
+      color: Constants.colors.white,
       alignItems: 'center',
       justifyContent: 'center',
     },
@@ -391,7 +372,7 @@ export default function App() {
       borderRadius: 50,
       fontSize: 16,
       fontWeight: '600',
-      color: colors.gray3,
+      color: Constants.colors.gray3,
       width: 166,
       center: true,
       textAlign: 'center',
@@ -420,15 +401,15 @@ export default function App() {
       borderRadius: 50,
       borderWidth: 1,
       padding: 1,
-      backgroundColor: colors.gray2,
+      backgroundColor: Constants.colors.gray2,
       width: 345,
       height: 50,
       marginTop: 16,
-      borderColor: colors.gray2,
+      borderColor: Constants.colors.gray2,
     },
     container: {
       flex: 1,
-      backgroundColor: colors.background,
+      backgroundColor: Constants.colors.background,
       alignItems: 'center',
       paddingTop: Platform.OS === 'android' ? 60 : 0,
       marginTop: Platform.OS === 'web' ? 50 : 0,
@@ -440,15 +421,15 @@ export default function App() {
     },
     resetButton: {
       marginTop: getOrientation == 'portrait' ? -86 - 31 - 31 : -81,
-      marginLeft: getOrientation == 'landscape' ? progress_wheel_size * 2 + 30 : 0,
+      marginLeft: getOrientation == 'landscape' ? Constants.progress_wheel_size * 2 + 30 : 0,
       fontSize: 16,
-      color: colors.primary,
+      color: Constants.colors.primary,
       fontWeight: '600',
       textAlign: 'center',
     },
     footer: {
       flexDirection: 'row',
-      backgroundColor: colors.footer,
+      backgroundColor: Constants.colors.footer,
       paddingTop: 31,
       paddingLeft: 31,
       paddingRight: 31,
@@ -462,7 +443,7 @@ export default function App() {
     },
     footerLink: {
       fontSize: 16,
-      color: colors.primary,
+      color: Constants.colors.primary,
       fontWeight: '600',
       marginLeft: 26,
       marginRight: 26,
@@ -470,60 +451,60 @@ export default function App() {
     },
     progressCircle: {
       borderRadius: 1000,
-      borderColor: colors.primary,
+      borderColor: Constants.colors.primary,
     },
     circularContainer: {
       marginTop: 19,
-      width: progress_wheel_size,
-      height: progress_wheel_size,
+      width: Constants.progress_wheel_size,
+      height: Constants.progress_wheel_size,
       borderWidth: 3,
       borderRadius: 100,
-      borderColor: colors.gray2,
+      borderColor: Constants.colors.gray2,
       justifyContent: 'center',
       alignItems: 'center'
     },
     circularFirstProgressLayer: {
-      width: progress_wheel_size,
-      height: progress_wheel_size,
+      width: Constants.progress_wheel_size,
+      height: Constants.progress_wheel_size,
       borderWidth: 3,
-      borderRadius: progress_wheel_size / 2,
+      borderRadius: Constants.progress_wheel_size / 2,
       position: 'absolute',
       borderLeftColor: 'transparent',
       borderBottomColor: 'transparent',
-      borderRightColor: colors.primary,
-      borderTopColor: colors.primary,
+      borderRightColor: Constants.colors.primary,
+      borderTopColor: Constants.colors.primary,
       transform: [{ rotateZ: '-135deg' }]
     },
     circularSecondProgressLayer: {
-      width: progress_wheel_size,
-      height: progress_wheel_size,
+      width: Constants.progress_wheel_size,
+      height: Constants.progress_wheel_size,
       position: 'absolute',
       borderWidth: 3,
-      borderRadius: progress_wheel_size / 2,
+      borderRadius: Constants.progress_wheel_size / 2,
       borderLeftColor: 'transparent',
       borderBottomColor: 'transparent',
-      borderRightColor: colors.primary,
-      borderTopColor: colors.primary,
+      borderRightColor: Constants.colors.primary,
+      borderTopColor: Constants.colors.primary,
       transform: [{ rotateZ: '45deg' }]
     },
     circularOffsetLayer: {
-      width: progress_wheel_size,
-      height: progress_wheel_size,
+      width: Constants.progress_wheel_size,
+      height: Constants.progress_wheel_size,
       position: 'absolute',
       borderWidth: 3,
-      borderRadius: progress_wheel_size / 2,
+      borderRadius: Constants.progress_wheel_size / 2,
       borderLeftColor: 'transparent',
       borderBottomColor: 'transparent',
-      borderRightColor: colors.gray2,
-      borderTopColor: colors.gray2,
+      borderRightColor: Constants.colors.gray2,
+      borderTopColor: Constants.colors.gray2,
       transform: [{ rotateZ: '-135deg' }]
     },
     currentPennyCount: {
-      color: colors.gray3,
+      color: Constants.colors.gray3,
       marginTop: 11,
     },
     currentAttemptCount: {
-      color: colors.gray3,
+      color: Constants.colors.gray3,
       marginBottom: 37,
 
     },
@@ -535,66 +516,66 @@ export default function App() {
     penny10: {
       width: 51,
       height: 51,
-      left: (158 - pennyOffset.left),
-      top: (236 - pennyOffset.top),
+      left: (158 - Constants.pennyOffset.left),
+      top: (236 - Constants.pennyOffset.top),
       position: 'absolute',
     },
     penny20: {
       width: 79,
       height: 64,
-      left: (158 - pennyOffset.left),
-      top: (223 - pennyOffset.top),
+      left: (158 - Constants.pennyOffset.left),
+      top: (223 - Constants.pennyOffset.top),
       position: 'absolute',
     },
 
     penny30: {
       width: 104,
       height: 86,
-      left: (133 - pennyOffset.left),
-      top: (223 - pennyOffset.top),
+      left: (133 - Constants.pennyOffset.left),
+      top: (223 - Constants.pennyOffset.top),
       position: 'absolute',
     },
 
     penny40: {
       width: 104,
       height: 94,
-      left: (133 - pennyOffset.left),
-      top: (223 - pennyOffset.top),
+      left: (133 - Constants.pennyOffset.left),
+      top: (223 - Constants.pennyOffset.top),
       position: 'absolute',
     },
     penny50: {
       width: 104,
       height: 94,
-      left: (133 - pennyOffset.left),
-      top: (223 - pennyOffset.top),
+      left: (133 - Constants.pennyOffset.left),
+      top: (223 - Constants.pennyOffset.top),
       position: 'absolute',
     },
     penny60: {
       width: 104,
       height: 98,
-      left: (133 - pennyOffset.left),
-      top: (219 - pennyOffset.top),
+      left: (133 - Constants.pennyOffset.left),
+      top: (219 - Constants.pennyOffset.top),
       position: 'absolute',
     },
     penny70: {
       width: 127,
       height: 98,
-      left: (133 - pennyOffset.left),
-      top: (219 - pennyOffset.top),
+      left: (133 - Constants.pennyOffset.left),
+      top: (219 - Constants.pennyOffset.top),
       position: 'absolute',
     },
     penny80: {
       width: 127,
       height: 114,
-      left: (133 - pennyOffset.left),
-      top: (219 - pennyOffset.top),
+      left: (133 - Constants.pennyOffset.left),
+      top: (219 - Constants.pennyOffset.top),
       position: 'absolute',
     },
     penny90: {
       width: 127,
       height: 120,
-      left: (133 - pennyOffset.left),
-      top: (219 - pennyOffset.top),
+      left: (133 - Constants.pennyOffset.left),
+      top: (219 - Constants.pennyOffset.top),
       position: 'absolute',
     },
     yesNoRowLandscape: {
@@ -602,7 +583,7 @@ export default function App() {
       top: 75,
     },
     yesButtonLandscape: {
-      marginRight: progress_wheel_size + 15
+      marginRight: Constants.progress_wheel_size + 15
     },
 
   });
