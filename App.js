@@ -70,6 +70,7 @@ export default function App() {
   const resetButtonPressed = () => {
     setPennyGraphic(pennyGraphic => pennyImages[0]);
     setTotalCounter(totalCounter => 0);
+    setPennyCount(0);
     setPercentComplete(0);
   }
   const yesButtonPressed = () => {

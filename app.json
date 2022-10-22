@@ -2,7 +2,7 @@
   "expo": {
     "name": "PennyGame",
     "slug": "penny-game-app",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "orientation": "default",
     "icon": "./assets/icon.png",
     "updates": {
@@ -13,7 +13,8 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "penny-game-app"
+      "bundleIdentifier": "penny-game-app",
+      "buildNumber": "2.0.0"
     },
     "android": {
       "adaptiveIcon": {
