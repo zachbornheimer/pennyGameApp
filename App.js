@@ -15,6 +15,7 @@ import {
   Pressable,
   Linking,
   Dimensions,
+  PlatformColor,
 } from 'react-native';
 import { getCurrentTimestamp } from 'react-native/Libraries/Utilities/createPerformanceLogger';
 
@@ -57,7 +58,29 @@ export default function App() {
     Dimensions.addEventListener('change', () => {
       setOrientation(isPortrait() ? 'portrait' : 'landscape');
     });
-  }, []);
+
+
+    var keyboardShortcuts = {
+      'y': () => { yesButtonPressed() },
+      'n': () => { noButtonPressed() },
+      'e': () => { if (totalCounter == 0) setHardMode(false) },
+      'h': () => { if (totalCounter == 0) setHardMode(true) },
+      'r': () => { resetButtonPressed() },
+    };
+
+    const upHandler = ({ key }) => {
+      keyboardShortcuts[event.key]();
+    };
+
+    if (Platform.OS === 'web') {
+      document.addEventListener('keyup', upHandler);
+    }
+
+    return () => {
+      document.removeEventListener('keyup', upHandler);
+    };
+
+  });
 
 
   const changeMode = () => {
